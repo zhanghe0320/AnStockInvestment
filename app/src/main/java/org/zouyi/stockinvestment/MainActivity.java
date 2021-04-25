@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.zouyi.stockinvestment.calculation.CalculFragment;
 import org.zouyi.stockinvestment.home.HomeFragment;
 import org.zouyi.stockinvestment.my.MyFragment;
 import org.zouyi.stockinvestment.view.NoScrollViewPager;
@@ -19,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
     /**内容区Fragment*/
     private List<Fragment> fragments;
     /**底部标签名*/
-    private String[] mTabNames={"DCF","我"};
+    private String[] mTabNames={"DCF","计算","我"};
     /**标签未被选中图标*/
-    private int[] iconUnSelected = {R.drawable.home_unselected, R.drawable.my_unselected};
+    private int[] iconUnSelected = {R.drawable.home_unselected,R.drawable.home_unselected, R.drawable.my_unselected};
     /**标签被选中图标*/
-    private int[] iconSelected = {R.drawable.home_selected, R.drawable.my_selected};
+    private int[] iconSelected = {R.drawable.home_selected, R.drawable.home_selected,R.drawable.my_selected};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
             if(i==0){
                 fragment = HomeFragment.newInstance(mTabNames[i]);
             }else  if(i==1){
+                fragment = CalculFragment.newInstance(mTabNames[i]);
+            }else  if(i==2){
                 fragment = MyFragment.newInstance(mTabNames[i]);
             }
             fragments.add(fragment);

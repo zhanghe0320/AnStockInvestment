@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="预测年限(年)"/>
+
+        <EditText
+            android:id="@+id/et_year1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入预测年限"
+            android:text="10"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="预测增长率(%)"/>
+
+        <EditText
+            android:id="@+id/et_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入预测增长率"
+            android:text="15"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_grow_multipl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="增长倍数"/>
+
+    <Button
+        android:id="@+id/btn_cal1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="计算" />
+
+    <!--计算预测年限内增长倍数######################结束-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="初始金额（亿）"/>
+
+        <EditText
+            android:id="@+id/et_init_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入初始金额"
+            android:text="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="期末金额（亿）"/>
+
+        <EditText
+            android:id="@+id/et_end_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:hint="请输入期末金额"
+            android:textSize="15sp"
+            android:text="10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="增长年限"/>
+
+        <EditText
+            android:id="@+id/et_year2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:hint="增长年限"
+            android:textSize="15sp"
+            android:text="10"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_grow_multipl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="增长倍数"/>
+
+    <TextView
+        android:id="@+id/tv_compound_grow_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="复合增长率"/>
+
+    <Button
+        android:id="@+id/btn_cal2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="计算" />
+
+</LinearLayout>
