@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="初始现金流(亿)"/>
+
+        <EditText
+            android:id="@+id/et_csxjl"
+            android:layout_width="0dp"
+            android:layout_weight="5.5"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入初始现金流"
+            android:text="10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="预测年限(年)"/>
+
+        <EditText
+            android:id="@+id/et_n"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入预测年限"
+            android:text="10"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="预测增长率(%)"/>
+
+        <EditText
+            android:id="@+id/et_r"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入预测增长率"
+            android:text="15"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="永续增长率(%)"/>
+
+        <EditText
+            android:id="@+id/et_i"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:textSize="15sp"
+            android:hint="请输入永续增长率"
+            android:text="3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="折现率(%)"/>
+
+        <EditText
+            android:id="@+id/et_d"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:hint="请输入折现率"
+            android:textSize="15sp"
+            android:text="10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="总股本(亿)"/>
+
+        <EditText
+            android:id="@+id/et_totalstock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:hint="请输入总股本"
+            android:textSize="15sp"
+            android:text="10"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="企业的价值为(亿)"/>
+
+    <TextView
+        android:id="@+id/tv_priceperstock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="每股价格(元)"/>
+
+    <TextView
+        android:id="@+id/tv_pe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="市盈率"/>
+
+    <Button
+        android:id="@+id/btn_cal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="计算" />
+
+</LinearLayout>

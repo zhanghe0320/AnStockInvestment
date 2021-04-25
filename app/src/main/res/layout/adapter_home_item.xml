@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <ImageView
+            android:id="@+id/ivHeadPhoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/head_photo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018幸福"
+                android:layout_alignParentLeft="true"
+                android:textColor="#333"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018.10.28"
+                android:layout_alignParentRight="true"
+                android:textColor="#999"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近在干嘛"
+            android:layout_marginTop="5dp"
+            android:textColor="#999"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+</LinearLayout>
