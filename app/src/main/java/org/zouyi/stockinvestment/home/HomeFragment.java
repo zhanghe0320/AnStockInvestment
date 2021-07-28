@@ -33,10 +33,13 @@ public class HomeFragment extends BaseFragment {
     private EditText et_i;
     private EditText et_d;
     private EditText et_totalstock;
+    private EditText et_securatio;
 
     private TextView tv_result;
-    private TextView tv_priceperstock;
     private TextView tv_pe;
+    private TextView tv_priceperstock;
+    private TextView tv_secu_price;
+
     private Button btn_cal;
 
     public static HomeFragment newInstance(String data) {
@@ -64,10 +67,12 @@ public class HomeFragment extends BaseFragment {
         et_i= view.findViewById(R.id.et_i);
         et_d= view.findViewById(R.id.et_d);
         et_totalstock= view.findViewById(R.id.et_totalstock);
+        et_securatio= view.findViewById(R.id.et_securatio);
 
         tv_result= view.findViewById(R.id.tv_result);
-        tv_priceperstock= view.findViewById(R.id.tv_priceperstock);
         tv_pe= view.findViewById(R.id.tv_pe);
+        tv_priceperstock= view.findViewById(R.id.tv_priceperstock);
+        tv_secu_price= view.findViewById(R.id.tv_secu_price);
 
         btn_cal= view.findViewById(R.id.btn_cal);
         btn_cal.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +126,13 @@ public class HomeFragment extends BaseFragment {
         }
         double totalstock =   Double.valueOf(str_totalstock).doubleValue();
 
+        String str_securatio = et_securatio.getText().toString().trim();
+        if(str_securatio==null || "".equals(str_securatio)){
+            centerToast("请输入安全系数");
+            return;
+        }
+        double securatio =   Double.valueOf(str_securatio).doubleValue();
+
         //企业最终价值
         double qiye_value=0;
         //第n年的自由现金流
@@ -141,14 +153,16 @@ public class HomeFragment extends BaseFragment {
         //四舍五入保留两位小数
         DecimalFormat df = new DecimalFormat("#.00");
 
-        //计算每个价格
-        double pricePerStock = qiye_value / totalstock;
         //计算市盈率:暂时用企业估值除以初始现金流
         double PE = qiye_value/csxjl;
+        //计算每股价格
+        double pricePerStock = qiye_value / totalstock;
+        double secuPrice = pricePerStock * securatio;
 
-        tv_result.setText("企业价值为："+df.format(qiye_value)+"亿");
-        tv_priceperstock.setText("每股价格："+df.format(pricePerStock)+"元");
+        tv_result.setText("总估值："+df.format(qiye_value)+"亿");
         tv_pe.setText("市盈率："+df.format(PE));
+        tv_priceperstock.setText("每股价格："+df.format(pricePerStock)+"元");
+        tv_secu_price.setText("安全价格："+df.format(secuPrice)+"元");
     }
 
     private void centerToast(String message){

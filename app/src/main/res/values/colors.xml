@@ -7,4 +7,5 @@
     <color name="colorLoadBackground">#ffffff</color>
     <color name="colorLoad">#2B2B2B</color>
     <color name="colorLoadBakgrd">#84DBE4</color>
+    <color name="dcfImportant1">#333333</color>
 </resources>

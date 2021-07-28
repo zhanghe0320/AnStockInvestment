@@ -10,14 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:paddingTop="@dimen/standard_padding1">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="4.5"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="初始现金流(亿)"/>
+            android:text="1 初始现金流(亿)"
+            android:textColor="@color/dcfImportant1"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/et_csxjl"
@@ -34,14 +36,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:paddingTop="@dimen/standard_padding">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="4.5"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="预测年限(年)"/>
+            android:text="2 预测年限(年)"/>
 
         <EditText
             android:id="@+id/et_n"
@@ -53,18 +55,21 @@
             android:hint="请输入预测年限"
             android:text="10"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="@dimen/standard_padding">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="4.5"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="预测增长率(%)"/>
+            android:textColor="@color/dcfImportant1"
+            android:textStyle="bold"
+            android:text="3 预测增长率(%)"/>
 
         <EditText
             android:id="@+id/et_r"
@@ -81,14 +86,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="@dimen/standard_padding">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="4.5"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="永续增长率(%)"/>
+            android:textColor="@color/dcfImportant1"
+            android:textStyle="bold"
+            android:text="4 永续增长率(%)"/>
 
         <EditText
             android:id="@+id/et_i"
@@ -105,14 +112,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="@dimen/standard_padding">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="4.5"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="折现率(%)"/>
+            android:text="5 折现率(%)"/>
 
         <EditText
             android:id="@+id/et_d"
@@ -129,14 +136,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="@dimen/standard_padding">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="4.5"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="总股本(亿)"/>
+            android:text="6 总股本(亿)"/>
 
         <EditText
             android:id="@+id/et_totalstock"
@@ -149,32 +156,78 @@
             android:text="10"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_result"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="企业的价值为(亿)"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/standard_padding">
 
-    <TextView
-        android:id="@+id/tv_priceperstock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="每股价格(元)"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="7 安全系数"/>
 
-    <TextView
-        android:id="@+id/tv_pe"
+        <EditText
+            android:id="@+id/et_securatio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:ems="20"
+            android:hint="请输入安全系数"
+            android:textSize="15sp"
+            android:text="0.7"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="市盈率"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/standard_padding1">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="总估值(亿)"/>
+
+        <TextView
+            android:id="@+id/tv_pe"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="市盈率"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/standard_padding1">
+
+        <TextView
+            android:id="@+id/tv_priceperstock"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="每股价格(元)"/>
+
+        <TextView
+            android:id="@+id/tv_secu_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="安全价格（元）"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_cal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/standard_padding2"
         android:textSize="15sp"
         android:text="计算" />
 
